@@ -15,7 +15,7 @@
             <div class="panel-body easypiechart-panel">
                 <a class="overlay" href="@Url.Action("Add Category", "Create", "Category")">
 
-                </a>  <h4>Category @Html.ActionLink("Add Category", "Create", "Category")</h4>
+                </a>  <h4>@Html.ActionLink("Add Category", "Create", "Category")</h4>
                 <div class="easypiechart" id="easypiechart-blue" data-percent="92"><span class="percent">92%</span></div>
             </div>
         </div>
@@ -23,28 +23,35 @@
     <div class="col-xs-6 col-md-3">
         <div class="panel panel-default">
             <div class="panel-body easypiechart-panel">
-                <h4>Products</h4>
-                <div class="easypiechart" id="easypiechart-orange" data-percent="65"><span class="percent">65%</span></div>
+                <a class="overlay" href="@Url.Action("Add Product", "Create", "Product")"></a>
+
+                <h4> @Html.ActionLink("Add Category", "Create", "Category")</h4>
+                    <div class="easypiechart" id="easypiechart-orange" data-percent="65"><span class="percent">65%</span></div>
             </div>
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
         <div class="panel panel-default">
             <div class="panel-body easypiechart-panel">
-                <h4>New Products</h4>
-                <div class="easypiechart" id="easypiechart-teal" data-percent="56"><span class="percent">56%</span></div>
+                <a class="overlay" href="@Url.Action("List of Categories", "List", "Category")"></a>
+
+                    <h4>
+                    @Html.ActionLink("Categoreis List", "List", "Category")</h4>
+                    <div class="easypiechart" id="easypiechart-teal" data-percent="56"><span class="percent">56%</span></div>
             </div>
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
         <div class="panel panel-default">
             <div class="panel-body easypiechart-panel">
-                <h4>Visitors</h4>
-                <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span></div>
+                <a class="overlay" href="@Url.Action("List of Product", "List", "Product")"></a>
+
+                    <h4> @Html.ActionLink("Product List", "Create", "Category")</h4>
+                    <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span></div>
             </div>
         </div>
     </div>
-</div><!--/.row-->
+</div>
 
 @Html.ActionLink("Add Category", "Create", "Category") |
 @Html.ActionLink("Add Product", "Create", "Product") |
