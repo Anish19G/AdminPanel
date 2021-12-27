@@ -20,5 +20,9 @@ namespace ProdCat.Controllers
             
             return View(db.tbProducts.ToList());
         }
+        public ActionResult Hhh()
+        {
+            return View();
+        }
     }
 }
