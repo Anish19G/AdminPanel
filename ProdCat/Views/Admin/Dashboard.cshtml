@@ -1,0 +1,53 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Dashboard";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome to Amdin Dashboard</h2>
+
+<div></div>
+<div class="row">
+    <div class="col-xs-6 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body easypiechart-panel">
+                <a class="overlay" href="@Url.Action("Add Category", "Create", "Category")">
+
+                </a>  <h4>Category @Html.ActionLink("Add Category", "Create", "Category")</h4>
+                <div class="easypiechart" id="easypiechart-blue" data-percent="92"><span class="percent">92%</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body easypiechart-panel">
+                <h4>Products</h4>
+                <div class="easypiechart" id="easypiechart-orange" data-percent="65"><span class="percent">65%</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body easypiechart-panel">
+                <h4>New Products</h4>
+                <div class="easypiechart" id="easypiechart-teal" data-percent="56"><span class="percent">56%</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body easypiechart-panel">
+                <h4>Visitors</h4>
+                <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span></div>
+            </div>
+        </div>
+    </div>
+</div><!--/.row-->
+
+@Html.ActionLink("Add Category", "Create", "Category") |
+@Html.ActionLink("Add Product", "Create", "Product") |
+
+@Html.ActionLink("Categories", "List", "Category")  |
+@Html.ActionLink("Products", "List", "Product") |
